@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./@button/*": "./src/@button/*"
+    "./@button/*": "./src/@button/*",
+    "./@code/*": "./src/@code/*",
+    "./*": "./src/*",
+    ".": {
+      "import": "./src/index.ts"
+    }
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
