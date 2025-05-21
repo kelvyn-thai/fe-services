@@ -1,0 +1,16 @@
+{
+  "name": "@repo/webpack-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.19",
+    "dotenv": "^16.5.0",
+    "mini-css-extract-plugin": "^2.9.2"
+  }
+}

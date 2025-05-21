@@ -1,12 +1,39 @@
-"use client";
+import React from "react";
+import clsx from "clsx";
+import "./button.less";
 
-import { JSX, ReactElement, ReactNode } from "react";
-
-export interface ButtonProps {
-  className?: string;
-  label: ReactNode | ReactElement | JSX.Element;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link";
+  size?: "default" | "sm" | "lg";
 }
 
-export const Button = ({ className, label }: ButtonProps) => {
-  return <button className={className}>{label}</button>;
+const Button: React.FC<ButtonProps> = ({
+  children,
+  className,
+  variant = "default",
+  size = "default",
+  ...rest
+}) => {
+  return (
+    <button
+      className={clsx(
+        "base-btn",
+        `base-btn--${variant}`,
+        `base-btn--${size}`,
+        className,
+      )}
+      {...rest}
+    >
+      {children}
+    </button>
+  );
 };
+
+export default Button;

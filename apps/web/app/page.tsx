@@ -1,12 +1,13 @@
-import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui";
-import styles from "./page.module.css";
+import "@repo/ui/index.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
       <h1>Hello world!</h1>
-      <Button label="app"></Button>
+      <Button variant="default" size="lg">
+        App
+      </Button>
     </div>
   );
 }

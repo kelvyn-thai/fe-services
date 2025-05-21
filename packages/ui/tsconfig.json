@@ -16,6 +16,6 @@
       "@icons/*": ["./src/@icons/*"]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src", "lib"],
+  "exclude": ["node_modules"]
 }
